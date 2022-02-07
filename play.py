@@ -78,4 +78,7 @@ def play():
             current_position = int(current_position)
         play_turn(setup.board, setup.player_signs[turns_counter % 2], current_position)
         turns_counter += 1
-    print(f"{setup.player_names[(turns_counter - 1) % 2]} has won!")
+        if has_won():
+        print(f"{setup.player_names[(turns_counter - 1) % 2]} has won!")
+    else:
+        print("No winner.")
